@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 2em;
   background-color: #444059;
   font-family: 'Luckiest Guy', cursive;
   color: #eee;
@@ -106,8 +106,9 @@ h1 {
   max-width: 50vw;
 }
 
-#buttons.disabled button {
+button.disabled {
   filter: grayscale(100%) brightness(.75);
+  cursor: none;
 }
 
 #buttons button {
@@ -129,3 +130,10 @@ button.paper {
 button.scissors {
   background-image: url(button_scissors.png);
 }
+
+.retry {
+  color:rgb(251, 255, 0);
+  text-shadow: 4px 4px 1px aqua, -4px -4px 1px aqua, 4px -4px 1px aqua, -4px 4px 1px aqua;
+  cursor: pointer;
+}
+ 
