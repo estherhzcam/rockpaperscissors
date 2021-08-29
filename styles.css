@@ -135,5 +135,7 @@ button.scissors {
   color:rgb(251, 255, 0);
   text-shadow: 4px 4px 1px aqua, -4px -4px 1px aqua, 4px -4px 1px aqua, -4px 4px 1px aqua;
   cursor: pointer;
+  margin:0;
+  padding:1
 }
  
