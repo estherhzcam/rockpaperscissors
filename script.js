@@ -8,9 +8,9 @@ let randomchoice;
 
 function startGame(){
     randomchoice = options[Math.floor(Math.random() * options.length)]
-    document.querySelector("button .rock").addEventListener("click",getPlayerChoice1);
-    document.querySelector("button .paper").addEventListener("click",getPlayerChoice2)
-    document.querySelector("button .scissors").addEventListener("click",getPlayerChoice3)
+    document.querySelector(".rock").addEventListener("click",getPlayerChoice1);
+    document.querySelector(".paper").addEventListener("click",getPlayerChoice2)
+    document.querySelector(".scissors").addEventListener("click",getPlayerChoice3)
 }
 
 function getPlayerChoice1(){
@@ -127,9 +127,9 @@ function determineWinner() {
 
 function tryAgain() {
     console.log("retry")
-    document.querySelector("button .rock").removeEventListener("click",getPlayerChoice1);
-    document.querySelector("button .paper").removeEventListener("click",getPlayerChoice2)
-    document.querySelector("button .scissors").removeEventListener("click",getPlayerChoice3)
+    document.querySelector(".rock").removeEventListener("click",getPlayerChoice1);
+    document.querySelector(".paper").removeEventListener("click",getPlayerChoice2)
+    document.querySelector(".scissors").removeEventListener("click",getPlayerChoice3)
     document.querySelector("button.rock").classList.add("disabled")
     document.querySelector("button.paper").classList.add("disabled")
     document.querySelector("button.scissors").classList.add("disabled")
