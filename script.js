@@ -93,42 +93,45 @@ function showElections () {
 
 function determineWinner() {
     console.log(winner + "wins")
-    /* if statements */
+ 
     if (winner == "computer"){
         console.log("you lose")
-        
-
-        /* <div id="player1" class="player"></div>
-        <div id="player2" class="player"></div> */
-        showLose()
+        /* how to make js wait until executing next funtion https://www.codegrepper.com/code-examples/javascript/how+to+wait+for+2+seconds+in+javascript */
+        setTimeout(function showLose(){document.querySelector("#lose").classList.remove("hidden")}, 300) 
     }
     else if (winner == "user"){
-        console.log("you win")
-        showWin()
+        console.log("you win");
+        setTimeout(function showWin(){document.querySelector("#win").classList.remove("hidden")}, 300) 
     }
     else {
         console.log("this is a tie")
+        setTimeout(function showLose(){document.querySelector("#draw").classList.remove("hidden")}, 300) 
         showDraw()
     }
 }
 
-function showWin(){
+/* function showWin(){
     console.log("showWin")
-}
+    document.querySelector("#win").classList.remove("hidden")
 
-function showLose(){
+} */
+
+/* function showLose(){
     console.log("showLose");
+   
 
-}
+} */
 
-function showDraw(){
-    console.log("showDraw")
-}
+/* function showDraw(){
+    console.log("showDraw");
+    document.querySelector("#draw").classList.remove("hidden")
+} */
 
 function showRockPaper(){
     document.querySelector("#player1").classList.remove("shake");
     document.querySelector("#player1").classList.add("rock"); 
     document.querySelector("#player2").classList.remove("shake");
     document.querySelector("#player2").classList.add("paper"); 
+    
 
 }
